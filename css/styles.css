@@ -140,6 +140,15 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     
 }
-.observe{
-    border: 10px solid green;
+.listBtn{
+width: 100px;
+height: 50px;
+opacity: 40%;
+border: none;
+background-color: gold;
+position: absolute;
+bottom: 10px;
+left: 650px;
+margin: 10px 10px;
+
 }

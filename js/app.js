@@ -1,6 +1,6 @@
 import galleryItems from "./prod.js";
 import refs from "./refs.js";
-const { list, modalDiv, img, closeBtn } = refs
+const { list, modalDiv, img, closeBtn,listBtn } = refs
 
 
 
@@ -29,6 +29,10 @@ const markUp = createEl(galleryItems)
 // рендер разметки
 list.insertAdjacentHTML('afterbegin', markUp)
 closeBtn.insertAdjacentHTML('afterbegin', '<img width=15 height=15 src="../images/cross-svgrepo-com.svg">')
+
+
+
+
 // open modal
 list.addEventListener('click', (e) => {
     console.log(e.target.nodeName);
@@ -45,6 +49,7 @@ list.addEventListener('click', (e) => {
 
 
 
+
 // close modal backdrop
 modalDiv.addEventListener('click', (e) => {
   const condition =  e.target.classList.contains('lightbox__overlay'); 
@@ -52,6 +57,7 @@ modalDiv.addEventListener('click', (e) => {
         hideElement(modalDiv)
     }
 })
+
 // close modal X button
 closeBtn.addEventListener('click', () => {
     hideElement(modalDiv)
